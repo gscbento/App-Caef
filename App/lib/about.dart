@@ -34,8 +34,8 @@ class Sobrenos extends StatelessWidget {
           logo,
           texto,
           Divider(
-            indent: 0.5,
-            endIndent: 0.5,
+            indent: 15,
+            endIndent: 15,
             //thickness: ,
             height: 10,
           ),
@@ -55,6 +55,8 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
+            indent: 15,
+            endIndent: 15,
             height: 10,
           ),
           ExpansionTile(
@@ -68,12 +70,18 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
+            indent: 15,
+            endIndent: 15,
             height: 10,
           ),
           ExpansionTile(
             title: Text('Eventos'),
             children: <Widget>[
-              Divider(),
+              Divider(
+                indent: 15,
+                endIndent: 15,
+                height: 10,
+              ),
               Container(
                 margin: EdgeInsets.all(15.0),
                 child: Text(
@@ -85,6 +93,8 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
+            indent: 15,
+            endIndent: 15,
             height: 10,
           ),
           ExpansionTile(
@@ -102,12 +112,18 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
-            height: 5,
+            indent: 15,
+            endIndent: 15,
+            height: 10,
           ),
           ExpansionTile(
             title: Text('Marketing'),
             children: <Widget>[
-              Divider(),
+              Divider(
+                indent: 15,
+                endIndent: 15,
+                height: 10,
+              ),
               Container(
                 child: Text(
                   'É a área responsável por divulgar as atividades do CAEF e assuntos relevantes aos estudantes de Engenharia Física, além de manter contatos e relações de colaboração com outros grupos e entidades. As atividades do Marketing incluem normalmente, mas não exclusivamente, o uso de softwares de edição de texto, de planilhas eletrônicas, de edição de imagens, de edição de vídeos e uso de equipamentos como câmeras de vídeo e microfones.',
@@ -119,12 +135,18 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
+            indent: 15,
+            endIndent: 15,
             height: 10,
           ),
           ExpansionTile(
-            title: Text('Gestão de Pessoas'),
+            title: Text('Recursos Humanos'),
             children: <Widget>[
-              Divider(),
+              Divider(
+                indent: 15,
+                endIndent: 15,
+                height: 10,
+              ),
               Container(
                 child: Text(
                   'É a área responsável pela manutenção das relações interpessoais entre os membros, participantes de uma determinada gestão do CAEF, assim como, do desenvolvimento dessas relações de maneira saudável e profissional.',
@@ -136,12 +158,18 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
+            indent: 15,
+            endIndent: 15,
             height: 10,
           ),
           ExpansionTile(
             title: Text('Presidência'),
             children: <Widget>[
-              Divider(),
+              Divider(
+                indent: 15,
+                endIndent: 15,
+                height: 10,
+              ),
               Container(
                 child: Text(
                   'É a área responsável por representar o CAEF e os alunos do curso de Engenharia Física perante a coordenação do curso e a comissão de graduação da faculdade. Além da tarefa de supervisionar todas as demais áreas presentes no CAEF, validar ou não a execução dos projetos futuros e continuação dos presentes e manter a harmonia entre as áreas, assim garantindo um bom funcionamento do CAEF.',
@@ -153,6 +181,8 @@ class Sobrenos extends StatelessWidget {
             ],
           ),
           Divider(
+            indent: 15,
+            endIndent: 15,
             height: 10,
           ),
         ],
