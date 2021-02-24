@@ -11,7 +11,10 @@ import './contact.dart';
 import './guide.dart';
 
 void main() {
-  runApp(new MaterialApp(debugShowCheckedModeBanner: false, home: new MyApp()));
+  runApp(new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.red, brightness: Brightness.dark),
+      home: new MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -33,7 +36,7 @@ class _MyAppState extends State<MyApp> {
   Drawer buildDrawer() {
     return Drawer(
       child: new Container(
-        color: Colors.grey[700],
+        color: Colors.grey[900],
         child: ListView(
           children: <Widget>[
             Padding(
@@ -57,7 +60,7 @@ class _MyAppState extends State<MyApp> {
               leading: Icon(Icons.group),
               title: Text(
                 "FeedBack",
-                style: TextStyle(color: Colors.orange[600]),
+                style: TextStyle(color: Colors.white70),
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -71,7 +74,7 @@ class _MyAppState extends State<MyApp> {
               leading: Icon(Icons.check_box_outline_blank),
               title: Text(
                 "Guia do estudante",
-                style: TextStyle(color: Colors.yellowAccent[700]),
+                style: TextStyle(color: Colors.white70),
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -84,8 +87,8 @@ class _MyAppState extends State<MyApp> {
             ListTile(
               leading: Icon(Icons.shopping_cart),
               title: Text(
-                "Produtos do CAEf",
-                style: TextStyle(color: Colors.yellowAccent[700]),
+                "Produtos do CAEF",
+                style: TextStyle(color: Colors.white70),
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -99,7 +102,7 @@ class _MyAppState extends State<MyApp> {
               leading: Icon(Icons.connect_without_contact),
               title: Text(
                 "SobreNós",
-                style: TextStyle(color: Colors.limeAccent),
+                style: TextStyle(color: Colors.white70),
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -113,7 +116,7 @@ class _MyAppState extends State<MyApp> {
               leading: Icon(Icons.import_contacts),
               title: Text(
                 "Contato",
-                style: TextStyle(color: Colors.amberAccent[400]),
+                style: TextStyle(color: Colors.white70),
               ),
               onTap: () {
                 Navigator.of(context).pop();
