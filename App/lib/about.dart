@@ -36,10 +36,11 @@ class Sobrenos extends StatelessWidget {
           Divider(
             indent: 15,
             endIndent: 15,
-            //thickness: ,
             height: 10,
           ),
+
           //Lista  de áreas CAEF
+
           ExpansionTile(
             title: Text('Assuntos Acadêmicos'),
             children: <Widget>[
@@ -139,6 +140,7 @@ class Sobrenos extends StatelessWidget {
             endIndent: 15,
             height: 10,
           ),
+
           ExpansionTile(
             title: Text('Recursos Humanos'),
             children: <Widget>[
@@ -162,6 +164,7 @@ class Sobrenos extends StatelessWidget {
             endIndent: 15,
             height: 10,
           ),
+
           ExpansionTile(
             title: Text('Presidência'),
             children: <Widget>[
@@ -180,6 +183,7 @@ class Sobrenos extends StatelessWidget {
               ),
             ],
           ),
+
           Divider(
             indent: 15,
             endIndent: 15,
