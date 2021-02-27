@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/*          Builder da página           */
 class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class AboutPage extends StatelessWidget {
   }
 }
 
+/*          Texto Sobre Nós             */
 class Sobrenos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class Sobrenos extends StatelessWidget {
             height: 10,
           ),
 
-          //Lista  de áreas CAEF
+//**************** Lista  de áreas CAEF
 
           ExpansionTile(
             title: Text('Assuntos Acadêmicos'),
@@ -140,7 +142,6 @@ class Sobrenos extends StatelessWidget {
             endIndent: 15,
             height: 10,
           ),
-
           ExpansionTile(
             title: Text('Recursos Humanos'),
             children: <Widget>[
@@ -164,7 +165,6 @@ class Sobrenos extends StatelessWidget {
             endIndent: 15,
             height: 10,
           ),
-
           ExpansionTile(
             title: Text('Presidência'),
             children: <Widget>[
@@ -183,7 +183,6 @@ class Sobrenos extends StatelessWidget {
               ),
             ],
           ),
-
           Divider(
             indent: 15,
             endIndent: 15,
