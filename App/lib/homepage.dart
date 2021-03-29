@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage>
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Top News Updates",
+                  "Notícias",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontFamily: "Times",
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage>
                   controller: _tabController,
                   isScrollable: true,
                   indicator: UnderlineTabIndicator(),
-                  labelColor: Colors.black,
+                  labelColor: Colors.yellow[800],
                   labelStyle: TextStyle(
                       fontFamily: "Avenir",
                       fontSize: 19,

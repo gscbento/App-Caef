@@ -73,7 +73,10 @@ class _HomeState extends State<Home> {
           padding: EdgeInsets.symmetric(horizontal: 25),
           child: Builder(
             builder: (context) => IconButton(
-              icon: Icon(Icons.menu),
+              icon: FaIcon(
+                FontAwesomeIcons.chevronRight,
+                size: 30.0,
+              ),
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),
           ),
@@ -83,18 +86,24 @@ class _HomeState extends State<Home> {
         centerTitle: false,
         titleSpacing: 0,
       ),
-      drawer: Container(
-        color: Colors.grey[900],
+      drawer: Drawer(
+        //background: Colors.grey[900],
         child: ListView(
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 20, left: 5),
             ),
-            ListTile(
-              leading: FaIcon(FontAwesomeIcons.newspaper),
+            /*ListTile(
+              trailing: FaIcon(FontAwesomeIcons.newspaper),
               title: Text(
                 "Notícias",
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontFamily: 'Avenir',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+                //textAlign: TextAlign.center,
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -103,6 +112,9 @@ class _HomeState extends State<Home> {
                     new MaterialPageRoute(
                         builder: (BuildContext context) => new NewsPage()));
               },
+            ),
+            Divider(
+              height: 50,
             ),
             ListTile(
               leading: Icon(Icons.group),
@@ -117,12 +129,18 @@ class _HomeState extends State<Home> {
                     new MaterialPageRoute(
                         builder: (BuildContext context) => new FeedBackPage()));
               },
-            ),
+            ),*/
             ListTile(
-              leading: Icon(Icons.check_box_outline_blank),
+              trailing: Icon(Icons.check_box_outline_blank),
               title: Text(
                 "Guia do estudante",
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontFamily: 'Avenir',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+                //textAlign: TextAlign.center,
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -132,11 +150,20 @@ class _HomeState extends State<Home> {
                         builder: (BuildContext context) => new GuidePage()));
               },
             ),
+            Divider(
+              height: 50,
+            ),
             ListTile(
-              leading: Icon(Icons.shopping_cart),
+              trailing: Icon(Icons.shopping_cart),
               title: Text(
                 "Produtos do CAEF",
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontFamily: 'Avenir',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+                //textAlign: TextAlign.center,
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -146,11 +173,20 @@ class _HomeState extends State<Home> {
                         builder: (BuildContext context) => new ProductsPage()));
               },
             ),
+            Divider(
+              height: 50,
+            ),
             ListTile(
-              leading: Icon(Icons.connect_without_contact),
+              trailing: Icon(Icons.connect_without_contact),
               title: Text(
                 "SobreNós",
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontFamily: 'Avenir',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+                //textAlign: TextAlign.center,
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -160,11 +196,20 @@ class _HomeState extends State<Home> {
                         builder: (BuildContext context) => new AboutPage()));
               },
             ),
+            Divider(
+              height: 50,
+            ),
             ListTile(
-              leading: Icon(Icons.import_contacts),
+              trailing: Icon(Icons.import_contacts),
               title: Text(
                 "Contato",
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontFamily: 'Avenir',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+                //textAlign: TextAlign.center,
               ),
               onTap: () {
                 Navigator.of(context).pop();
