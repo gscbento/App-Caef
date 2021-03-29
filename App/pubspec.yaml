@@ -29,6 +29,9 @@ dependencies:
   cupertino_icons: ^1.0.1
   font_awesome_flutter: ^8.11.0
   url_launcher: ^5.7.10
+  xml2json: ^5.0.0
+  xml: ^5.0.2
+  http: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +52,11 @@ flutter:
   assets:
     - img/logo-caef.jpg
     - img/president.png
+    - img/camiseta.jpeg
+    - assets/icons/
+    - assets/user.png
+    - assets/cardimage.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
@@ -58,17 +66,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Times
+      fonts:
+        - asset: assets/fonts/times_news_roman/Times New Roman 400.ttf
+          weight: 400
+        - asset: assets/fonts/times_news_roman/Times New Roman Gras 700.ttf
+          weight: 700
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/avenir/AvenirNextLTPro-Regular.otf
+          weight: 400
+        - asset: assets/fonts/avenir/AvenirNextLTPro-Demi.otf
+          weight: 500
+        - asset: assets/fonts/avenir/AvenirNextLTPro-Demi.otf
+          weight: 600
+        - asset: assets/fonts/avenir/avenir-next-lt-pro-bold.otf
+          weight: 700
+    - family: League
+      fonts:
+        - asset: assets/fonts/league_spartan/LeagueSpartan-Bold.otf
+  #
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
