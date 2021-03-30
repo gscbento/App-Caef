@@ -27,11 +27,20 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.1
+
+  ## Icons diferentes
   font_awesome_flutter: ^8.11.0
+
+  ## Requisição web e conversão de xml
   url_launcher: ^5.7.10
   xml2json: ^5.0.0
   xml: ^5.0.2
   http: ^0.13.1
+
+  ##pdf
+  native_pdf_view: ^4.0.1
+  native_pdf_renderer: ^3.0.0
+  image: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +65,7 @@ flutter:
     - assets/icons/
     - assets/user.png
     - assets/cardimage.jpg
+    - assets/guia_de_ef.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

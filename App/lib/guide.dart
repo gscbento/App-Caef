@@ -1,18 +1,95 @@
 import 'package:flutter/material.dart';
+import 'package:native_pdf_view/native_pdf_view.dart';
 
 class GuidePage extends StatefulWidget {
   @override
-  _State createState() => _State();
+  _GuidePageState createState() => _GuidePageState();
 }
 
-class _State extends State<GuidePage> {
+class _GuidePageState extends State<GuidePage> {
+  static final int _initialPage = 1;
+  int _actualPageNumber = _initialPage, _allPagesCount = 0;
+  bool isSampleDoc = true;
+  PdfController _pdfController;
+
   @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Colors.grey[850],
-        title: new Text('Guia do estudante'),
-      ),
+  void initState() {
+    _pdfController = PdfController(
+      document: PdfDocument.openAsset('assets/guia_de_ef.pdf'),
+      initialPage: _initialPage,
     );
+    super.initState();
   }
+
+  @override
+  void dispose() {
+    _pdfController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+        theme: ThemeData(primaryColor: Colors.black),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text(''),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.navigate_before),
+                onPressed: () {
+                  _pdfController.previousPage(
+                    curve: Curves.ease,
+                    duration: Duration(milliseconds: 100),
+                  );
+                },
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  '$_actualPageNumber/$_allPagesCount',
+                  style: TextStyle(fontSize: 22),
+                ),
+              ),
+              IconButton(
+                icon: Icon(Icons.navigate_next),
+                onPressed: () {
+                  _pdfController.nextPage(
+                    curve: Curves.ease,
+                    duration: Duration(milliseconds: 100),
+                  );
+                },
+              ),
+              /*IconButton(
+                icon: Icon(Icons.refresh),
+                onPressed: () {
+                  if (isSampleDoc) {
+                    _pdfController.loadDocument(
+                        PdfDocument.openAsset('assets/dummy.pdf'));
+                  } else {
+                    _pdfController.loadDocument(
+                        PdfDocument.openAsset('assets/sample.pdf'));
+                  }
+                  isSampleDoc = !isSampleDoc;
+                },
+              )*/
+            ],
+          ),
+          body: PdfView(
+            documentLoader: Center(child: CircularProgressIndicator()),
+            pageLoader: Center(child: CircularProgressIndicator()),
+            controller: _pdfController,
+            onDocumentLoaded: (document) {
+              setState(() {
+                _allPagesCount = document.pagesCount;
+              });
+            },
+            onPageChanged: (page) {
+              setState(() {
+                _actualPageNumber = page;
+              });
+            },
+          ),
+        ),
+      );
 }
